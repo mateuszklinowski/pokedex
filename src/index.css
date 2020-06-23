@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --light: rgb(240, 240, 240);
+    --blue: rgb(120, 168, 192);
+    --dark: rgb(72, 72, 72);
+    --red: rgb(192, 72, 72);
+    --skin: rgb(240, 216, 168);
+    --base: 10px;
+    --avatar : 96px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--light);
+}
+
+.wrapper {
+  margin-top:calc(var(--base) + 2vh)
+}
+
+.stat-name {
+    border-bottom: 2px solid var(--dark);
+}
+
+.poke-list li{
+    cursor: pointer;
+}
+
+.poke-row{
+    width: 100%;
+    padding: calc(var(--base) * 0.4) var(--base);
+}
+
+.poke-img {
+    height: var(--avatar);
+    width: var(--avatar);
+}
+
+.poke-img__placeholder {
+    height: var(--avatar);
+    width: var(--avatar);
+    background: var(--blue);
+    display: block;
+    border-radius: 50%;
+}
+
+.poke-type__placeholder {
+    min-width: 100px;
 }

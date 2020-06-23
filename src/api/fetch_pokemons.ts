@@ -24,7 +24,6 @@ export const fetchPokemonsFromApi = (typeFilter?: string) => {
     return fetch("https://pokeapi.co/api/v2/pokemon?limit=-1")
         .then(res => res.json())
         .then(res => {
-            console.log('org', res)
             return (res.results || []).map(apiPokemonToPokemon)
         });
 };
